@@ -1,0 +1,122 @@
+/* Example Box */
+.example-box {
+  margin-top: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Tabs */
+.tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 9999px; /* pill shape */
+  background: #e2e8f0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.tab-btn.active {
+  background: linear-gradient(135deg, #2563eb, #10b981);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: #f1f5f9;
+  color: #334155;
+}
+.action-btn:hover {
+  background: #e2e8f0;
+}
+.run-btn {
+  background: #10b981;
+  color: white;
+}
+.run-btn:hover {
+  background: #059669;
+}
+
+/* Code Block - Editor Style */
+.code-block {
+  background: #0f172a; /* deep dark */
+  color: #f8fafc;
+  font-family: "Fira Code", monospace;
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+  position: relative;
+  border-left: 4px solid #10b981;
+}
+
+/* Line numbers */
+.code-block code {
+  counter-reset: line;
+  display: block;
+}
+.code-block code span {
+  display: block;
+  counter-increment: line;
+}
+.code-block code span::before {
+  content: counter(line);
+  display: inline-block;
+  width: 2em;
+  margin-right: 12px;
+  text-align: right;
+  color: #64748b;
+}
+
+/* Highlight HTML tags */
+code .tag {
+  color: #38bdf8; /* cyan */
+}
+code .attr {
+  color: #facc15; /* yellow */
+}
+code .string {
+  color: #34d399; /* green */
+}
+
+/* Result Preview */
+.result-box {
+  padding: 20px;
+  background: #ffffff;
+  min-height: 120px;
+  font-size: 15px;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}

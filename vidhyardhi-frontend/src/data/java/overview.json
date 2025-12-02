@@ -1,0 +1,15 @@
+{
+  "title": "Overview of Java",
+  "subtopics": [
+    {
+      "id": "features",
+      "title": "Features",
+      "content": "Java is platform-independent, object-oriented, and secure..."
+    },
+    {
+      "id": "uses",
+      "title": "Uses",
+      "content": "Java is widely used in web apps, Android, enterprise software..."
+    }
+  ]
+}

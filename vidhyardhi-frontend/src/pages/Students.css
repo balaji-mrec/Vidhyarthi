@@ -1,0 +1,251 @@
+/* Students.css */
+
+.students-wrapper {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.students-hero {
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.students-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.students-hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Exams Grid */
+.students-exams {
+  margin: 60px 0;
+}
+
+.students-exams h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #2c3e50;
+}
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.exam-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+}
+
+.exam-card h3 {
+  color: #3498db;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.exam-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.exam-card li {
+  padding: 5px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.exam-card li:before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+/* Resources Grid */
+.students-resources {
+  margin: 60px 0;
+}
+
+.students-resources h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.resource-card {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+/* College Guidance */
+.students-college {
+  margin: 60px 0;
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.students-college h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.college-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.feature h3 {
+  color: #3498db;
+}
+
+/* Success Stories */
+.students-success {
+  margin: 60px 0;
+}
+
+.students-success h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  background: #3498db;
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+
+.testimonial span {
+  display: block;
+  margin-top: 15px;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Call to Action */
+.students-cta {
+  text-align: center;
+  margin: 60px 0;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border-radius: 10px;
+}
+
+.students-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Buttons */
+.cta-btn, .primary-btn {
+  display: inline-block;
+  background: white;
+  color: #3498db;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover, .primary-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  display: inline-block;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.exam-btn {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.exam-btn:hover {
+  background: #2980b9;
+}

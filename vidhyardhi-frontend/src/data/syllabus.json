@@ -1,0 +1,39 @@
+{
+  "branches": [
+    {
+      "id": "cse",
+      "label": "Computer Science (CSE)",
+      "semesters": [
+        {
+          "id": "sem1",
+          "label": "Semester 1",
+          "subjects": [
+            {
+              "id": "maths1",
+              "label": "Mathematics-1",
+              "resources": {
+                "notes": ["/assets/notes/math1_unit1.pdf"],
+                "videos": ["https://www.youtube.com/embed/xyz1"],
+                "pyqs": ["/assets/pyqs/math1_2023.pdf"],
+                "quizzes": [
+                  {
+                    "q": "What is derivative of x^2?",
+                    "options": ["2x", "x", "x^2", "1"],
+                    "ans": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "physics",
+              "label": "Engineering Physics",
+              "resources": { "notes": [], "videos": [], "pyqs": [], "quizzes": [] }
+            }
+          ]
+        },
+        { "id": "sem2", "label": "Semester 2", "subjects": [] }
+      ]
+    },
+    { "id": "ece", "label": "Electronics (ECE)", "semesters": [] }
+  ]
+}

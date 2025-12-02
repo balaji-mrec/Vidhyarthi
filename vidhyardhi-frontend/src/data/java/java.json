@@ -1,0 +1,29 @@
+{
+  "topics": [
+    {
+      "title": "Introduction",
+      "subtopics": [
+        {
+          "title": "History of Java",
+          "desc": "Java was developed by Sun Microsystems...",
+          "code": "class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello World\"); } }"
+        },
+        {
+          "title": "Features of Java",
+          "desc": "Java is platform independent, object-oriented...",
+          "code": null
+        }
+      ]
+    },
+    {
+      "title": "Variables",
+      "subtopics": [
+        {
+          "title": "Types of Variables",
+          "desc": "Java supports local, instance, and static variables...",
+          "code": "int x = 10; String name = \"Java\";"
+        }
+      ]
+    }
+  ]
+}

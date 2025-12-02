@@ -1,0 +1,15 @@
+{
+  "title": "History & Evolution",
+  "subtopics": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": "Java was developed by James Gosling at Sun Microsystems..."
+    },
+    {
+      "id": "evolution",
+      "title": "Evolution",
+      "content": "Java has evolved through multiple versions from JDK 1.0 to the latest..."
+    }
+  ]
+}

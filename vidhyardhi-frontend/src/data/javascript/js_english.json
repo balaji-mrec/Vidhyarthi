@@ -1,0 +1,19 @@
+{
+  "topics": [
+    {
+      "title": "JavaScript Home",
+      "desc": "Welcome to JavaScript! 🚀 JavaScript is the programming language of the Web.",
+      "code": "console.log('Hello JavaScript!');"
+    },
+    {
+      "title": "JavaScript Introduction",
+      "desc": "JavaScript is used to make web pages interactive.",
+      "code": "document.getElementById('demo').innerHTML = 'Hello JS!';"
+    },
+    {
+      "title": "JavaScript Variables",
+      "desc": "Variables are used to store data values.",
+      "code": "let name = 'Balanju';\nconsole.log(name);"
+    }
+  ]
+}

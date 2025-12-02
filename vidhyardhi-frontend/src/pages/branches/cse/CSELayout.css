@@ -1,0 +1,31 @@
+.semester-nav {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: #f5f7fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.semester-link {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #e3e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.semester-link:hover {
+  background: #cbd5e1;
+}
+
+.semester-link.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.semester-content {
+  padding: 24px;
+  font-size: 1.2rem;
+}

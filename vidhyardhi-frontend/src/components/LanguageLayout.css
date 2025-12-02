@@ -1,0 +1,733 @@
+/* Clean, Professional Design inspired by W3Schools & GeeksforGeeks */
+:root {
+  --header-h: 120px;
+  --primary-color: #04aa6d; /* W3Schools green */
+  --primary-hover: #059669;
+  --secondary-color: #f8f9fa;
+  --accent-color: #000000; /* Professional blue */
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #adb5bd;
+  --border-color: #dee2e6;
+  --border-light: #e9ecef;
+  --background-light: #f4f7f2;
+  --background-gray: #f8f9fa;
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ===== Wrapper ===== */
+.language-layout {
+  display: flex;
+  height: calc(100vh - var(--header-h));
+  background: var(--background-gray);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-primary);
+  overflow: hidden;
+  border-top: 1px solid var(--border-light);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 240px; /* Reduced from 280px to show more sections */
+  background: var(--background-light);
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.2s ease;
+  position: relative;
+  box-shadow: var(--shadow-subtle);
+}
+
+.sidebar.collapsed {
+  width: 56px;
+}
+
+/* Resizable handle */
+.sidebar::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  cursor: col-resize;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+.sidebar::after:hover {
+  background: var(--primary-color);
+  opacity: 0.3;
+}
+
+/* Sidebar header */
+.sidebar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px; /* Reduced padding */
+  background: var(--background-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sidebar-title-text {
+  font-size: 1rem; /* Slightly smaller */
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hide the title text when collapsed */
+.sidebar.collapsed .sidebar-title-text {
+  display: none;
+}
+
+/* Icon-only toggle */
+.sidebar-toggle {
+  width: 28px; /* Smaller toggle button */
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--background-light);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Sidebar list (scrollable) */
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0; /* Reduced padding to show more items */
+}
+
+/* Clean scrollbar */
+.sidebar-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Sidebar items - Compact & Professional like W3Schools */
+.sidebar-item {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 8px 20px 8px 0; /* ZERO left padding - sections start from left edge */
+  margin: 0;
+  border: none;
+  background: transparent;
+  font-size: 0.85rem; /* Smaller font to fit more items */
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  border-left: 3px solid transparent;
+  line-height: 1.3; /* Tighter line height */
+}
+
+.sidebar-item:hover {
+  background: var(--background-gray);
+  color: var(--text-primary);
+  border-left-color: var(--primary-color);
+}
+
+.sidebar-item.active {
+  background: var(--primary-color);
+  color: white;
+  border-left-color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* When sidebar collapsed */
+.sidebar.collapsed .sidebar-item {
+  padding: 8px;
+  text-align: center;
+}
+
+.sidebar.collapsed .sidebar-item-label {
+  display: none;
+}
+
+/* ===== Content Area ===== */
+.content {
+  flex: 1;
+  padding: 24px 32px; /* Reduced padding */
+  overflow-y: auto;
+  background: var(--background-light);
+  position: relative;
+}
+
+/* Clean scrollbar for content */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Content title - Clean & Professional */
+.content-title {
+  font-size: 1.8rem; /* Smaller title */
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+/* Content body - Clean card design */
+.content-body {
+  background: var(--background-light);
+  padding: 24px; /* Reduced padding */
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+  color: var(--text-primary);
+  line-height: 1.6; /* Tighter line height */
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+/* Code blocks - Clean & readable */
+.content-body pre,
+.content-body code {
+  background: var(--background-gray);
+  padding: 12px 16px; /* Reduced padding */
+  border-radius: 6px;
+  display: block;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-size: 0.85rem; /* Smaller font */
+  overflow-x: auto;
+  margin: 12px 0; /* Reduced margin */
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+}
+
+.content-body code:not(pre code) {
+  background: var(--background-gray);
+  padding: 3px 6px; /* Reduced padding */
+  border-radius: 4px;
+  font-size: 0.8rem; /* Smaller font */
+  border: 1px solid var(--border-light);
+}
+
+/* Preview box */
+.preview-box {
+  margin-top: 20px; /* Reduced margin */
+  padding: 20px; /* Reduced padding */
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--background-light);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* ===== Right Rail (Ads) - Linked to main content scrolling ===== */
+.rail {
+  width: 180px; /* Slightly increased for better ad visibility */
+  background: var(--background-light);
+  border-left: 1px solid var(--border-light);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* Remove overflow-y: auto to link scrolling with main content */
+  overflow: hidden;
+}
+
+.ad-box {
+  height: 100px; /* Slightly increased height */
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  background: var(--background-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 12px;
+  transition: all 0.2s ease;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.ad-box:hover {
+  border-color: var(--primary-color);
+  background: var(--background-light);
+}
+
+/* ===== Language Switcher ===== */
+.language-switcher {
+  position: absolute;
+  top: 16px; /* Adjusted position */
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 6px 12px; /* Smaller padding */
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.2s ease;
+}
+
+.language-switcher:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-medium);
+}
+
+.language-switcher .icon {
+  width: 16px; /* Smaller icon */
+  height: 16px;
+  margin-right: 6px;
+  color: var(--text-secondary);
+}
+
+.language-switcher select {
+  border: none;
+  background: transparent;
+  font-size: 0.85rem; /* Smaller font */
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+}
+
+.language-switcher select:focus {
+  color: var(--primary-color);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .rail { display: none; }
+  .content { padding: 20px 24px; }
+}
+
+@media (max-width: 768px) {
+  .sidebar { width: 200px; }
+  .sidebar.collapsed { width: 48px; }
+  .content { padding: 16px 20px; }
+  .content-body { padding: 20px; }
+}
+
+/* ===== Resizable Handle ===== */
+.resizable-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  cursor: col-resize;
+  background: transparent;
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.resizable-handle:hover,
+.resizable-handle.dragging {
+  background: var(--primary-color);
+  opacity: 0.3;
+}
+
+.resizable-handle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 1px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.resizable-handle:hover::after,
+.resizable-handle.dragging::after {
+  opacity: 1;
+}
+
+/* ===== Additional Professional Elements ===== */
+/* Section dividers */
+.content-section {
+  margin-bottom: 24px; /* Reduced margin */
+}
+
+.content-section h2 {
+  font-size: 1.3rem; /* Smaller heading */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px; /* Reduced margin */
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Info boxes */
+.info-box {
+  background: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 6px;
+  padding: 12px 16px; /* Reduced padding */
+  margin: 12px 0; /* Reduced margin */
+  color: #0056b3;
+  font-size: 0.9rem; /* Smaller font */
+}
+
+.info-box.warning {
+  background: #fff3cd;
+  border-color: #ffeaa7;
+  color: #856404;
+}
+
+.info-box.success {
+  background: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 6px 12px; /* Smaller padding */
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem; /* Smaller font */
+  font-weight: 500;
+  transition: background 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--text-primary);
+}
+
+/* Table styles */
+.content-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0; /* Reduced margin */
+  font-size: 0.85rem; /* Smaller font */
+}
+
+.content-body th,
+.content-body td {
+  padding: 8px 12px; /* Reduced padding */
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.content-body th {
+  background: var(--background-gray);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* List styles */
+.content-body ul,
+.content-body ol {
+  padding-left: 20px; /* Reduced padding */
+  margin: 12px 0; /* Reduced margin */
+}
+
+.content-body li {
+  margin-bottom: 6px; /* Reduced margin */
+  line-height: 1.5; /* Tighter line height */
+}
+
+/* Blockquote */
+.content-body blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 16px; /* Reduced padding */
+  margin: 16px 0; /* Reduced margin */
+  font-style: italic;
+  color: var(--text-secondary);
+  background: var(--background-gray);
+  padding: 12px 16px; /* Reduced padding */
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem; /* Smaller font */
+}
+
+/* ===== Compact Navigation for More Sections ===== */
+/* Show more sections by default */
+.sidebar-nav {
+  max-height: calc(100vh - 200px); /* Ensure proper scrolling */
+}
+
+/* Compact section numbering */
+.sidebar-item::before {
+  content: attr(data-number);
+  display: inline-block;
+  width: 20px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+/* Professional section grouping */
+.sidebar-section-group {
+  margin: 8px 0;
+  padding: 4px 0;
+}
+
+.sidebar-section-group-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 20px 4px;
+  margin-bottom: 4px;
+}
+
+/* ===== Content Area ===== */
+.content {
+  flex: 1;
+  padding: 24px 32px;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); /* Subtle gradient background */
+  position: relative;
+}
+
+/* Content title - Make it more prominent for students */
+.content-title {
+  font-size: 2.2rem; /* Bigger title */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Content body - Make it stand out from the background */
+.content-body {
+  background: var(--background-light);
+  padding: 32px; /* More padding for better readability */
+  border-radius: 16px; /* Rounded corners */
+  border: 2px solid var(--primary-color); /* Stronger border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+  color: var(--text-primary);
+  line-height: 1.7; /* Better line height for reading */
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a top accent bar to the content body */
+.content-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+}
+
+/* Code blocks - Make them more prominent for students */
+.content-body pre,
+.content-body code {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%); /* Dark background */
+  padding: 20px 24px; /* More padding */
+  border-radius: 12px; /* Rounded corners */
+  display: block;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  font-size: 0.9rem; /* Slightly larger font */
+  overflow-x: auto;
+  margin: 20px 0; /* More margin */
+  border: 2px solid var(--primary-color); /* Stronger border */
+  color: #e2e8f0; /* Light text for dark background */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.content-body code:not(pre code) {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+/* Add special styling for student-focused content */
+.student-note {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  color: #92400e;
+  font-weight: 600;
+  position: relative;
+}
+
+.student-note::before {
+  content: '💡 Student Tip:';
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #d97706;
+}
+
+/* Make headings more prominent */
+.content-body h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 24px 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.content-body h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 20px 0 12px 0;
+}
+
+/* Better paragraph spacing for readability */
+.content-body p {
+  margin-bottom: 16px;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+/* Enhanced list styling */
+.content-body ul,
+.content-body ol {
+  padding-left: 24px;
+  margin: 16px 0;
+}
+
+.content-body li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Make tables more readable */
+.content-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.content-body th,
+.content-body td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.content-body th {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.content-body tr:nth-child(even) {
+  background: var(--background-gray);
+}
+
+.content-body tr:hover {
+  background: rgba(4, 170, 109, 0.05);
+}
+  
+  
+/* ===== Expand Main Section Edge-to-Edge and Remove Boxes ===== */
+.content {
+  padding-left: 0;   /* remove gap to sidebar */
+  padding-right: 0;  /* remove gap to ad rail */
+}
+
+.content-body {
+  margin: 0;                 /* remove outer spacing */
+  padding: 0;                /* remove inner card padding */
+  background: transparent;   /* no card box */
+  border: none;              /* no border */
+  box-shadow: none;          /* no shadow */
+  border-radius: 0;          /* square edges */
+}
+
+.content-body::before {
+  display: none;             /* remove accent bar */
+}
+
+/* Keep readability inside typical elements */
+.content-body p,
+.content-body ul,
+.content-body ol,
+.content-body table,
+.content-body pre {
+  margin-left: 16px;   /* subtle inner breathing room */
+  margin-right: 16px;
+}
+
+@media (max-width: 1024px) {
+  .content { padding-left: 0; padding-right: 0; }
+}
+
+@media (max-width: 768px) {
+  .content { padding-left: 0; padding-right: 0; }
+}
+
+

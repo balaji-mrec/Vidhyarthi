@@ -1,0 +1,373 @@
+/* ===== MAIN CONTENT CONTAINER ===== */
+.main-content {
+  padding: 20px;
+  width: 100%;
+  margin: 0;
+  background: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ===== MAIN TITLE ===== */
+.content-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  color: #000000;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+}
+
+/* ===== CONTENT BODY ===== */
+.content-body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* ===== PARAGRAPHS ===== */
+.content-body p {
+  margin: 15px 0;
+  color: #333333;
+}
+
+.content-body strong {
+  font-weight: 600;
+  color: #000000;
+}
+
+.content-body em {
+  font-style: italic;
+  color: #666666;
+}
+
+/* ===== HEADINGS ===== */
+.content-body h1,
+.content-body h2,
+.content-body h3,
+.content-body h4 {
+  color: #000000;
+  font-weight: 400;
+  margin: 25px 0 15px 0;
+  padding: 0;
+}
+
+.content-body h1 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 8px;
+}
+
+.content-body h2 {
+  font-size: 1.5rem;
+  color: #04aa6d;
+  border-left: 4px solid #04aa6d;
+  padding-left: 15px;
+  margin: 30px 0 20px 0;
+}
+
+.content-body h3 {
+  font-size: 1.3rem;
+  color: #04aa6d;
+  margin: 25px 0 15px 0;
+}
+
+/* ===== LISTS ===== */
+.content-body ul,
+.content-body ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.content-body li {
+  margin: 8px 0;
+  color: #333333;
+}
+
+/* ===== IN SHORT BLOCK ===== */
+.inshort-block {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-left: 4px solid #04aa6d;
+  margin: 20px 0;
+  padding: 15px 20px;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inshort-block .inshort-content {
+  margin: 0;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* ===== KEY FEATURES SECTION ===== */
+.key-features {
+  margin: 25px 0;
+  background: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.key-features h3 {
+  color: #04aa6d;
+  font-size: 1.4rem;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+.key-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.key-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+  color: #333333;
+  position: relative;
+  padding-left: 25px;
+}
+
+.key-features li:last-child {
+  border-bottom: none;
+}
+
+.key-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #04aa6d;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ===== BIRTH SECTION ===== */
+.birth-section {
+  margin: 25px 0;
+  background: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.birth-section h3 {
+  color: #04aa6d;
+  font-size: 1.4rem;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+.birth-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.birth-section li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+  color: #333333;
+  position: relative;
+  padding-left: 20px;
+}
+
+.birth-section li:last-child {
+  border-bottom: none;
+}
+
+.birth-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #04aa6d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ===== LINEAGE SECTION ===== */
+.lineage-section {
+  margin: 25px 0;
+  background: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lineage-section h3 {
+  color: #04aa6d;
+  font-size: 1.4rem;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+.lineage-section .lineage-intro {
+  font-style: italic;
+  color: #666666;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.lineage-item {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  margin: 15px 0;
+  padding: 15px;
+  border-left: 4px solid #04aa6d;
+}
+
+.lineage-item h4 {
+  color: #04aa6d;
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.lineage-item p {
+  margin: 5px 0;
+  color: #333333;
+  font-size: 14px;
+}
+
+.lineage-item .pros {
+  color: #04aa6d;
+  font-weight: 500;
+}
+
+.lineage-item .cons {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* ===== CODE BLOCKS ===== */
+.content-body code {
+  background: #f8f9fa;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #e83e8c;
+}
+
+.content-body pre {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 15px;
+  border-radius: 0;
+  overflow-x: auto;
+  margin: 15px 0;
+}
+
+.content-body pre code {
+  background: none;
+  padding: 0;
+  color: #333333;
+}
+
+/* ===== TABLES ===== */
+.content-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border: 1px solid #e9ecef;
+}
+
+.content-body th,
+.content-body td {
+  border: 1px solid #e9ecef;
+  padding: 12px;
+  text-align: left;
+}
+
+.content-body th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* ===== LINKS ===== */
+.content-body a {
+  color: #04aa6d;
+  text-decoration: none;
+}
+
+.content-body a:hover {
+  text-decoration: underline;
+}
+
+/* ===== BUTTONS ===== */
+.content-body .btn {
+  background: #04aa6d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.content-body .btn:hover {
+  background: #059862;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .content-title {
+    font-size: 1.8rem;
+  }
+  
+  .content-body h1 {
+    font-size: 1.5rem;
+  }
+  
+  .content-body h2 {
+    font-size: 1.3rem;
+  }
+  
+  .key-features,
+  .birth-section,
+  .lineage-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .content-title {
+    font-size: 1.6rem;
+  }
+  
+  .content-body {
+    font-size: 14px;
+  }
+  
+  .key-features,
+  .birth-section,
+  .lineage-section {
+    padding: 10px;
+  }
+}

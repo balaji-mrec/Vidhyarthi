@@ -1,0 +1,104 @@
+{
+  "topics": [
+   {
+      "title": "HTML Home",
+      "desc": "# \n\nHTML (**HyperText Markup Language**) is the standard markup language used to create web pages. It structures content using elements such as headings, paragraphs, links, lists, and more.\n\n---\n\n##  Why choose our HTML Learning Platform?\n\n- 📘 **Beginner-Friendly**: Simple, step-by-step tutorials with real examples.\n- ⚡ **Interactive Examples**: Run code instantly with the built-in editor.\n- 🌍 **Multi-language Support**: Learn in **English, తెలుగు, हिंदी**.\n- 🧑‍💻 **Practical Focus**: Covers both basics and advanced concepts.\n\n> 💡 Unlike W3Schools, our platform is tailored for Indian learners with localized content and practice-focused teaching.\n\n---\n\n## ✅ Advantages of HTML\n\n- Easy to learn and widely used.\n- Works on all modern browsers.\n- Forms the backbone of every website.\n- Combines seamlessly with CSS & JavaScript.\n\n---\n\n## 🚀 What you'll build\n\n- Personal portfolio websites\n- Blog pages\n- Forms & surveys\n- Interactive web apps (with CSS & JS)\n",
+      "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>My First Page</title>\n  </head>\n  <body>\n    <h1>Hello, World!</h1>\n    <p>Welcome to HTML learning.</p>\n  </body>\n</html>"
+    },
+    {
+      "title": "HTML Introduction",
+      "desc": "HTML (HyperText Markup Language) is the standard markup language for creating web pages.",
+      "code": "<h1>This is a heading</h1>\n<p>This is a paragraph.</p>\n<a href='#'>This is a link</a>"
+    },
+    {
+      "title": "HTML Editors",
+      "desc": "You can write HTML using simple editors like Notepad, VS Code, Sublime, etc.",
+      "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Editor Example</title>\n  </head>\n  <body>\n    <h2>Written in VS Code</h2>\n  </body>\n</html>"
+    },
+    {
+      "title": "HTML Basic",
+      "desc": "HTML documents consist of elements such as headings, paragraphs, links, and images.",
+      "code": "<h1>My Heading</h1>\n<p>This is a simple paragraph.</p>\n<a href='https://example.com'>Visit Example</a>\n<img src='image.jpg' alt='Sample Image'>"
+    },
+    {
+      "title": "HTML Elements",
+      "desc": "HTML elements are building blocks, defined by a start tag, content, and an end tag.",
+      "code": "<p>This is an element.</p>\n<div>\n  <h2>Inside div</h2>\n  <p>Content here...</p>\n</div>"
+    },
+    {
+      "title": "HTML Attributes",
+      "desc": "HTML attributes provide additional information about elements, such as id, class, src, href, etc.",
+      "code": "<img src='logo.png' alt='Website Logo'>\n<a href='https://google.com' target='_blank'>Google</a>"
+    },
+    {
+      "title": "HTML Headings",
+      "desc": "HTML headings are defined with <h1> to <h6> tags.",
+      "code": "<h1>Main Heading</h1>\n<h2>Subheading</h2>\n<h3>Smaller Heading</h3>"
+    },
+    {
+      "title": "HTML Paragraphs",
+      "desc": "Paragraphs are defined with the <p> tag. They are block-level elements.",
+      "code": "<p>This is a paragraph of text.</p>\n<p>Another paragraph here.</p>"
+    },
+    {
+      "title": "HTML Links",
+      "desc": "HTML links are created using the <a> tag with href attribute.",
+      "code": "<a href='https://example.com'>Visit Example</a>"
+    },
+    {
+      "title": "HTML Images",
+      "desc": "Images are inserted using the <img> tag with src and alt attributes.",
+      "code": "<img src='flower.jpg' alt='A beautiful flower'>"
+    },
+    {
+      "title": "HTML Lists",
+      "desc": "HTML supports ordered and unordered lists.",
+      "code": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>\n\n<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>"
+    },
+    {
+      "title": "HTML Tables",
+      "desc": "HTML tables are created using <table>, <tr>, <td>, and <th> tags.",
+      "code": "<table border='1'>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>25</td>\n  </tr>\n</table>"
+    },
+    {
+      "title": "HTML Forms",
+      "desc": "Forms are used to collect user input. They contain input fields, checkboxes, radio buttons, etc.",
+      "code": "<form>\n  <label>Name:</label>\n  <input type='text'>\n  <br>\n  <label>Password:</label>\n  <input type='password'>\n  <br>\n  <input type='submit' value='Submit'>\n</form>"
+    },
+    {
+      "title": "HTML Semantic Elements",
+      "desc": "Semantic elements clearly describe their meaning, e.g., <header>, <footer>, <article>, <section>.",
+      "code": "<header>\n  <h1>Website Title</h1>\n</header>\n<section>\n  <h2>News Article</h2>\n  <p>Some content here...</p>\n</section>\n<footer>\n  <p>© 2025 My Website</p>\n</footer>"
+    },
+    {
+      "title": "HTML Media",
+      "desc": "HTML allows embedding of audio and video.",
+      "code": "<video controls>\n  <source src='movie.mp4' type='video/mp4'>\n</video>\n\n<audio controls>\n  <source src='song.mp3' type='audio/mp3'>\n</audio>"
+    },
+    {
+      "title": "HTML Iframes",
+      "desc": "An iframe is used to embed another webpage inside the current page.",
+      "code": "<iframe src='https://example.com' width='300' height='200'></iframe>"
+    },
+    {
+      "title": "HTML Entities",
+      "desc": "Entities are used to display reserved characters like <, >, ©, etc.",
+      "code": "&lt;p&gt;This will show angle brackets&lt;/p&gt;\n&copy; 2025 My Website"
+    },
+    {
+      "title": "HTML Symbols",
+      "desc": "HTML provides many symbols via entities.",
+      "code": "&#9733; Star Symbol\n&#9829; Heart Symbol"
+    },
+    {
+      "title": "HTML Forms Input Types",
+      "desc": "Different input types like text, email, number, date, color, etc.",
+      "code": "<form>\n  <input type='email' placeholder='Enter email'>\n  <input type='number' placeholder='Enter age'>\n  <input type='date'>\n  <input type='color'>\n</form>"
+    },
+    {
+      "title": "HTML Responsive Design",
+      "desc": "Responsive design uses meta tags and CSS media queries.",
+      "code": "<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n<style>\n  body { font-family: Arial; }\n  @media (max-width: 600px) {\n    body { background-color: lightblue; }\n  }\n</style>"
+    }
+  ]
+}

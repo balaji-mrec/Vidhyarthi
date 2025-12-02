@@ -1,0 +1,9 @@
+{
+  "topics": [
+    {
+      "title": "HTML Home",
+      "desc": "HTML (HyperText Markup Language) వెబ్ పేజీలను సృష్టించడానికి ఉపయోగించే ప్రమాణిత భాష.",
+      "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>నా మొదటి పేజీ</title>\n  </head>\n  <body>\n    <h1>హలో, వరల్డ్!</h1>\n    <p>HTML నేర్చుకోవడానికి స్వాగతం.</p>\n  </body>\n</html>"
+    }
+  ]
+}
